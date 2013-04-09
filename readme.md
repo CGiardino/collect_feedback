@@ -216,4 +216,4 @@ And that's all. In source code you will find only a bit more styling. I hope all
 
 * * *
 
-If you want to build something for real using meteor.js, preferable if you are a company or have funding.. you can always contact me.
+If you want to build something for real using meteor.js, preferable if you are a company or have funding.. you can always contact me [following me on twitter](https://twitter.com/cgiardino).
