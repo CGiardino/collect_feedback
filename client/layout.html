@@ -1,0 +1,77 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BerlinJS Meteor.js Demo</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+      <div class="masthead">
+        <div class="pull-right">
+          {{loginButtons}}
+        </div>
+        <h3>meteor.js demo</h3>
+      </div>
+
+      <div>
+        <p>This application needs most basic Facebook permissions. It only needs your name and picture. It won't publish anything on your wall.</p>
+        <p>You can easily remove it from your Facebook applications right after trying the demo.</p>
+      </div>
+
+      <hr>
+
+      <div class="row-fluid marketing">
+        {{#if currentUser}}
+          <div class="span6 chat-box">
+            {{> chatBox}}
+          </div>
+          <div class="span6 chat-box">
+            {{> allUsers}}
+          </div>
+        {{else}}
+          <h2>Sign in to get started</h2>
+        {{/if}}
+      </div>
+
+      <hr>
+
+
+    </div> <!-- /container -->
+
+</body>
+
+
+<template name="allUsers">
+  <h4>All users</h4>
+  
+  <div class="all-users-box">
+  {{#each users}}
+    <img src="{{profile.picture}}" alt="picture" class="img-rounded">
+  {{/each}}
+  </div>
+</template>
+
+
+<template name="chatBox">
+  <h4>Let's chat</h4>
+  
+  <form action="" id="add-message-form" class="form-inline">
+    <input type="text" id="message-input" class="input-block-level" placeholder="Your Message" autocomplete="off" />
+    <button class="btn btn-primary">Send</button>
+  </form>
+  
+  <ul class="messages-list">
+    {{#each messages}}
+      <li>
+        <img src="{{author.profile.picture}}" alt="picture" class="img-rounded">
+        <div class="message-author">{{author.profile.name}}</div>
+        <div class="message-body">{{body}}</div>
+      </li>
+    {{/each}}
+  </ul>
+</template>
