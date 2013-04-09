@@ -1,10 +1,8 @@
 # Step by step guide to simple meteor.js app
 
-by: Kris Urbas, [@krzysu](https://twitter.com/krzysu)  
 
 **We will build simple chat client for Facebook users.**  
 
-The demo is available [here](http://berlinjs-demo.meteor.com/)
 
 
 ## On a side note
@@ -217,6 +215,5 @@ And at the end we need to get all messages and display them. Add this code to `m
 And that's all. In source code you will find only a bit more styling. I hope all is clear but if you have questions you can always open an github issue for this project.
 
 * * *
-If you like it, consider [following me on twitter](https://twitter.com/krzysu).  
 
 If you want to build something for real using meteor.js, preferable if you are a company or have funding.. you can always contact me.
