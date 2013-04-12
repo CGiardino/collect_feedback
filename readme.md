@@ -142,7 +142,7 @@ Questo è tutto. Provate a loggarvi nell'app con due differenti browsers e diffe
 
 ## Fase 6. Aggiungi un semplice sistema di chat.
 
-Chating is based on messages. So we need to add Messages model inside `model.coffee` file.
+Chating è basato su messaggi. Allora abbiamo bisogno di aggiungere Messaggi nel modello corrispondente al file 'model.coffee'.
 
     @Messages = new Meteor.Collection('messages')
     Messages.allow
