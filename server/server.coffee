@@ -5,8 +5,8 @@ Accounts.loginServiceConfiguration.remove
 
 Accounts.loginServiceConfiguration.insert
   service: "facebook"
-  appId:  "insertHereYourID"
-  secret:  "insertHereYourSecret" 
+  appId:  "570083826349306"
+  secret:  "b9feb5ce363256e989c3de588a8e3367" 
 
 # during new account creation get user picture from facebook and save in user object
 Accounts.onCreateUser (options, user) ->

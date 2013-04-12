@@ -144,7 +144,9 @@ Questo è tutto. Provate a loggarvi nell'app con due differenti browsers e diffe
 
 Chating is based on messages. So we need to add Messages model inside `model.coffee` file.
 
-    Messages = new Meteor.Collection('messages')
+    @Messages = new Meteor.Collection('messages')
+    Messages.allow
+      'insert': (userId,doc) -> return true
 
 Si, questo è tutto quello che abbiamo bisogno per creare una nuova collection di dati in meteor.js!
 
@@ -167,7 +169,8 @@ In seguito, abbiamo bisogno di aggiungere alcuni file html per inserire i messag
         {{#each messages}}
           <li>
               <img src="{{author.profile.picture}}" alt="picture">
-              <span>{{body}}</span>
+              <div class="message-author">{{author.profile.name}}</div>
+              <div class="message-body">{{body}}</div>
           </li>
         {{/each}}
       </ul>
